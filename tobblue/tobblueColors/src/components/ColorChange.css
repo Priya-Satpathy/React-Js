@@ -1,0 +1,22 @@
+
+.ColorChange {
+  height: 100vh;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.white {
+  background-color: white;
+}

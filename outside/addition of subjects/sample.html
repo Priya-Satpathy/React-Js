@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div>
+        <label for="text">Enter your text</label><br/>
+        <input type=" textbox" id="name"><br/>
+       <p id="message"></p>
+    </div> -->
+   
+    <!-- <script>
+        let nameInput = document.getElementById("name");
+        
+        nameInput.addEventListener("input" ,function(){
+            message.innerHTML = nameInput.value;
+        });
+    </script> -->
+
+    <div>
+        <h1>Input mark of three subjects</h1>
+        <div>
+            <div>
+                <label for="text">Subject 1:</label>
+                <input type="textbox" id="sub1" >
+            </div>
+            <div>
+                <label for="text">Subject 2:</label>
+                <input type="textbox" id="sub2" >
+            </div>
+            <div>
+                <label for="text">Subject 3:</label>
+                <input type="textbox" id="sub3" >
+            </div>  
+            
+        </div>
+        <h3>Total mark is : </h3>
+        <p id="result">0</p>
+    </div>
+
+    <script>    
+        let subOneInput = document.getElementById("sub1");
+        let subTwoInput = document.getElementById("sub2"); 
+        let subThreeInput = document.getElementById("sub3");
+        let result = document.getElementById("result");
+
+        subOneInput.addEventListener("input",function(){ 
+            if( subTwoInput.value == ""){
+                result.innerHTML = subOneInput.value;
+            }
+            else if( subThreeInput.value == ""){
+                result.innerHTML = subOneInput.value;
+            }
+            else{
+                result.innerHTML = parseInt(subOneInput.value) + parseInt(subTwoInput.value) + parseInt(subThreeInput.value) ; 
+            }
+            
+        });
+
+        subTwoInput.addEventListener("input",function(){ 
+            if( subOneInput.value == ""){
+                result.innerHTML = subTwoInput.value;
+            }
+            else if( subThreeInput.value == ""){
+                result.innerHTML = subTwoInput.value;
+            }
+            else{
+                result.innerHTML = parseInt(subOneInput.value) + parseInt(subTwoInput.value) + parseInt(subThreeInput.value) ; 
+            }
+            
+        });
+
+        subThreeInput.addEventListener("input",function(){ 
+            if( subTwoInput.value == ""){
+                result.innerHTML = subThreeInput.value;
+            }
+            else if( subOneInput.value == ""){
+                result.innerHTML = subThreeInput.value;
+            }
+            else{
+                result.innerHTML = parseInt(subOneInput.value) + parseInt(subTwoInput.value) + parseInt(subThreeInput.value) ; 
+            }
+            
+        });
+    </script>
+    
+</body>
+</html>
